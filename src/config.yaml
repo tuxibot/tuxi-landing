@@ -1,30 +1,30 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Tuxibot
+  site: 'https://tuxibot.com' # Your actual domain
   base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
-# Default SEO metadata
+# Default SEO metadata optimized for AI document search
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Tuxibot - AI-Powered Document Search
+    template: '%s | Tuxibot'
+  description: "🔍 Intelligent document search powered by AI. Find answers instantly across your documents, PDFs, and knowledge base with advanced semantic search capabilities."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Tuxibot
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/tuxibot-og-image.png' # Create a custom OG image
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@tuxibot' # Update with your Twitter handle
+    site: '@tuxibot'
     cardType: summary_large_image
 
 i18n:
@@ -34,39 +34,56 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 6
+    postsPerPage: 8 # Increased for better content discovery
 
     post:
       isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/insights/%slug%' # Changed to "insights" for AI/tech focus
       robots:
         index: true
 
     list:
       isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'insights' # Changed from "blog" to "insights"
       robots:
         index: true
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'topics' # More relevant for document search categories
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      pathname: 'tags' # Keep tags for search optimization
       robots:
-        index: false
+        index: true # Enable indexing for better discoverability
 
     isRelatedPostsEnabled: true
-    relatedPostsCount: 4
+    relatedPostsCount: 6 # Increased for better content discovery
 
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: null # Add your GA4 ID: "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'dark:only' # Allow users to choose light/dark for better UX
+
+# Additional SEO optimization for AI/search focus
+search:
+  enabled: true
+  provider: 'pagefind' # Enable built-in search
+  
+# Custom metadata for AI document search branding
+branding:
+  tagline: "AI-Powered Document Intelligence"
+  keywords: 
+    - "AI document search"
+    - "semantic search"
+    - "document intelligence"
+    - "knowledge management"
+    - "AI-powered search"
+    - "document analysis"
+    - "intelligent search"
